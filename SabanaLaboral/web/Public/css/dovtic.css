@@ -1,0 +1,407 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 20, 2018, 4:41:18 PM
+    Author     : alvaro
+*/
+
+
+/* base */
+a {
+    cursor:pointer;
+}
+
+
+body {
+    background: #eee;
+}
+
+main {
+    padding-left: 240px;
+}
+
+
+/* select */
+
+select.browser-default.invalid {
+    border: 1px solid red;
+}
+
+/* materizlize overrides */
+
+.side-nav {
+    width: 240px;
+    overflow: visible;
+}
+.side-nav .divider {
+    margin:0;
+}
+
+.required {
+    color: black !important;
+}
+
+/* aside */
+.aside-header {
+    margin-top: 0;
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    padding-left: 10px;
+    background: #4caf50;
+    height: 50px;
+}
+
+.aside-avatar {
+    position:relative;
+    height: 150px;
+    /* background: url(https://wrappixel.com/demos/admin-templates/material-pro/assets/images/background/user-info.jpg);*/
+    background: url(https://wrappixel.com/demos/admin-templates/material-pro/assets/images/background/user-info.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.aside-icon {
+    color: #2e3a40 !important;
+    margin-right: 10px !important;
+    font-size: 20px;
+
+}
+
+#icon-clinic {
+    color: #676666 !important;
+
+}
+.pulse-avatar {
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(149, 195, 216, 0.7);
+    border-radius: 50%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+
+.avatar-description {
+    position:absolute;
+    background: #455a64;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    opacity: 0.47;
+    height: 40px;
+}
+
+.aside-avatar span {
+    position: absolute;
+    top: 107px;
+    left: 10px;
+    color: white;
+}
+
+.aside-avatar  i{
+    position: absolute;
+    top: 115px;
+    color:white;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+
+}
+
+.aside-footer {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: space-around;
+    height:  30px;
+    align-items: center;
+
+}
+
+
+
+
+
+
+/******* header *****/
+header {
+    display: flex;
+    flex-direction: row;
+    line-height: 50px;
+    color: white;
+    padding-left: 10px;
+    background: #66bb6a; 
+    height: 50px;
+}
+header .logo-container{
+    font-family: Lobster;
+    font-size: 40px;
+
+}
+
+header .header-actions {
+    display: flex;
+    flex-direcion:row;
+    width: 100%;
+    justify-content: space-between;
+    padding:  0px 10px;
+}
+
+header .buscar {
+    margin: 0px;
+    width: 100%;
+    background: #4fc3f7;
+    color: white;
+    padding-left: 15px;
+    margin: 5px 0px;
+    line-height: 40px;
+}
+header  #search-top {
+    color: white;
+    width: 90%;
+    transition: width 0.4s ease-in-out;
+    background: transparent;
+    padding-left: 10px;
+    border: none;
+    height: 35px;
+    border-radius: 7px;
+}
+
+header #search-top:focus {  outline: none; }
+header #search-top::-webkit-input-placeholder {color: white;}
+header #search-top::-moz-placeholder {color: white;}
+header #search-top:-ms-input-placeholder {color: white;}
+header #search-top:-moz-placeholder {color: white;}
+
+
+/* materilize */
+header .autocomplete-content {
+    position: absolute;
+
+    opacity: 1;
+    margin-top: 5px;
+    margin-left:  -15px;
+    z-index: 1001;
+
+}
+
+.popover {
+    z-index: 1100 !important;
+}
+
+
+
+
+
+
+
+/**** footer ****/
+footer {
+    height: 50px;
+    background: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+}
+
+
+/* odontograma */
+
+#odontograma {
+    max-width: 700px;
+    height:calc(100vh - 50px);
+    display: flex;
+    justify-content:space-between; 
+    flex-direction:column;
+    margin: 0 auto; 
+    position: relative;
+}
+
+#superior_permanente, #inferior_permanente, #superior_temporal, #inferior_temporal {
+    overflow: hidden;
+
+}
+
+#superior_permanente.noHeight, #inferior_permanente.noHeight,
+#superior_temporal.noHeight , #inferior_temporal.noHeight {
+    height: 0px !important;
+}
+
+.odontograma-panel {
+    flex: 1;
+    padding: 10px;
+    transition: 1s;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+
+.odontograma-panel-header {
+    background: #fff ;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 10;
+    width: calc(100% - 240px);
+    padding-left: 20px;
+}
+.odontograma-panel-header .imagen {
+    width: 50px;
+}
+
+.odontograma-panel-header .nombre {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    padding-left: 10px;
+    justify-content: space-around;
+}
+
+.odontograma-panel-header .actions {
+    width: 60px;
+    /*background: #4db6ac;*/
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.odontograma-panel-header .actions i {
+    font-size: 3em;
+}
+.odontograma-panel-header .actions:hover {
+    background: #29b6f6;
+    color: white;
+}
+
+
+//modal- Confirm
+#modalConfirm h4 {
+    margin-bottom: 50px;
+}
+
+.btnModalConfirm {
+    background: #29b6f6;
+    color: #FFF;
+    margin: 20px;
+}
+
+#modalConfirm .icon-confirm {
+    font-size: 150px;
+    padding: 15px;
+    color: #ffcc80;
+}
+
+#btn_confirm_Eliminar {
+    background: #ef9a9a;
+
+}
+#btn_confirm_Eliminar:hover {
+    background: #ef5350;
+
+}
+
+#btn_confirm_Cancel:hover {
+    background: #757575;
+
+}
+#btn_confirm_Cancel{
+    background: #bdbdbd;
+
+}
+
+
+/* Desktop Devices > 992px */
+@media only screen and (max-width: 992px) {
+    main {
+        padding-left: 0;
+    }
+    .odontograma-panel-header {
+        width: 100%;
+        padding: 0;
+
+    }
+
+    table {
+        font-size: 10px;
+
+    }
+    table a {
+        font-size: 16px;
+    }
+
+    #modalConfirm .icon-confirm {
+        font-size: 80px;
+
+    }
+
+    #modalConfirm h4 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .btn-large {
+        height: 30px;
+        line-height: 30px;
+    }
+
+
+
+}
+
+
+/*small and large devices*/
+.onSmall {
+    display: none;
+}
+@media (max-width: 812px) {
+    .onLarge {
+        display: none;
+    }
+    .onSmall {
+        display: inline-block;
+    }
+}
+
+
+/* Tablets Devices > 600px */
+@media only screen and (max-width: 600px) {
+
+
+}
+
+/* Tablets Devices > 600px */
+@media only screen and (min-width: 1600px) {
+
+    #odontograma {
+        max-width: 1000px;
+    }
+
+}
+
+@keyframes pulse {to {box-shadow: 0 0 0 25px rgba(100, 149, 223, 0);}}
+
+
+
+
+/* sticky header */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

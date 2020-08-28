@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 26, 2018, 10:05:35 AM
+    Author     : sammy
+*/
+
+body {
+    background: #03a9f4;
+}
+
+.contenedor {
+    
+    display: flex;
+    justify-content: center !important;
+    flex-direction: column;
+    align-items: center!important;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nombre {
+    font-family: lobster;
+    font-size: 50px;
+    color: white;
+}
+
+
+.logo {
+    
+    color: aliceblue !important;
+    font-size: 200px !important;
+    margin-top: -200px;
+}
+    
+   
+
+#preloader_3{
+    position:relative;
+    margin-right: 50px;
+}
+#preloader_3:before{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#03a9f4;
+    content:'';
+    position:absolute;
+    background:#03a9f4;
+    animation: preloader_3_before 1.5s infinite ease-in-out;
+}
+ 
+#preloader_3:after{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#03a9f4;
+    content:'';
+    position:absolute;
+    background:#03a9f4;
+    left:22px;
+    animation: preloader_3_after 1.5s infinite ease-in-out;
+}
+ 
+@keyframes preloader_3_before {
+    0% {transform: translateX(0px) rotate(0deg)}
+    50% {transform: translateX(50px) scale(1.2) rotate(260deg); background:#e1e1e2;border-radius:0px;}
+      100% {transform: translateX(0px) rotate(0deg)}
+}
+@keyframes preloader_3_after {
+    0% {transform: translateX(0px)}
+    50% {transform: translateX(-50px) scale(1.2) rotate(-260deg);background:#e1e1e2;border-radius:0px;}
+    100% {transform: translateX(0px)}
+}

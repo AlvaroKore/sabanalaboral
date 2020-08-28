@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Test" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from clinica]]>
+	</queryString>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="doctor" class="dovtic.ejb.entities.Doctor">
+		<fieldDescription><![CDATA[doctor]]></fieldDescription>
+	</field>
+	<field name="doctorId" class="java.lang.Long">
+		<fieldDescription><![CDATA[doctorId]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.util.Date">
+		<fieldDescription><![CDATA[fecha]]></fieldDescription>
+	</field>
+	<field name="fechaString" class="java.lang.String">
+		<fieldDescription><![CDATA[fechaString]]></fieldDescription>
+	</field>
+	<field name="horaInicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[horaInicio]]></fieldDescription>
+	</field>
+	<field name="horaInicioString" class="java.lang.String">
+		<fieldDescription><![CDATA[horaInicioString]]></fieldDescription>
+	</field>
+	<field name="horaTermino" class="java.sql.Time">
+		<fieldDescription><![CDATA[horaTermino]]></fieldDescription>
+	</field>
+	<field name="horaTerminoString" class="java.lang.String">
+		<fieldDescription><![CDATA[horaTerminoString]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="motivoCita" class="java.lang.String">
+		<fieldDescription><![CDATA[motivoCita]]></fieldDescription>
+	</field>
+	<field name="paciente" class="dovtic.ejb.entities.Paciente">
+		<fieldDescription><![CDATA[paciente]]></fieldDescription>
+	</field>
+	<field name="personaId" class="java.lang.Long">
+		<fieldDescription><![CDATA[personaId]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="100" splitType="Stretch">
+			<image>
+				<reportElement x="310" y="0" width="100" height="100"/>
+				<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("http://api.dovtic.com/uploads/clinica_1/logo/1548800716.png")]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="77" y="0" width="333" height="20"/>
+				<textElement markup="none">
+					<font fontName="ArialMT"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{motivoCita}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

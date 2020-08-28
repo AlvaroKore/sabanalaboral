@@ -1,0 +1,54 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package namespace="/expediente"  name="expediente"  extends="struts-default" >
+        
+        <result-types>
+            <result-type name="jasper" class="org.apache.struts2.views.jasperreports.JasperReportsResult"/>
+        </result-types>
+
+ 
+        <interceptors>
+            <interceptor-stack name="secureAction">
+                <interceptor-ref name="scope">
+                    <param name="key">alu</param>
+                    <param name="session">
+                     
+                    </param>
+                </interceptor-ref>
+
+                <interceptor-ref name="paramsPrepareParamsStack">
+                    <param name="validation.validateAnnotatedMethodOnly">true</param>
+                </interceptor-ref>
+            </interceptor-stack>
+
+        </interceptors>
+
+        <default-interceptor-ref name="secureAction" />
+        
+        
+       
+        <action name="" class="com.sabanalaboral.actions.ExpedienteAction" method="index" >
+            <result name="success">/expediente/Index.jsp</result>
+            <result name="input">/expediente/Index.jsp</result>
+
+        </action>
+        
+        <action name="showAjaxContent" class="com.sabanalaboral.actions.ExpedienteAction" method="showAjaxContent" >
+            <result name="success">/expediente/AjaxContent.jsp</result>
+            <result name="input">/expediente/AjaxContent.jsp</result>
+        </action>
+        
+          <action name="handleChangeOrganoJurisdiccional" class="com.sabanalaboral.actions.ExpedienteAction" method="handleChangeOrganoJurisdiccional" >
+            <result name="success">/expediente/AjaxContent.jsp</result>
+            <result name="input">/expediente/AjaxContent.jsp</result>
+        </action>
+        
+        
+      
+      
+         
+    </package>
+</struts>

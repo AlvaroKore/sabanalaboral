@@ -1,0 +1,27 @@
+{
+    "name": "Dovtic ",
+    "short_namel": "Dovtic",
+    "start_url": "/login/",
+    "scope": ".",
+    "display": "standalone",
+    "background": "#fff",
+    "theme_color": "#000",
+    "description": "Dovtic",
+    "dir": "ltr",
+    "lang": "es",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+      "src": "Public/img/favicon/favicon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "Public/img/favicon/android-chrome-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        }
+     
+    ]
+
+}
