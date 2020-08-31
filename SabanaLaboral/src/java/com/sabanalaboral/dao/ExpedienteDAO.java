@@ -19,7 +19,6 @@ public class ExpedienteDAO {
     
      private static void _setValuesFromRS(Expediente e, ResultSet rs) throws Exception {
         e.setIdExpediente(rs.getString("idExpediente"));
-        e.setNumeroExpediente(rs.getString("numero_expediente"));
         e.setOrganoJurisdiccional(rs.getString("organo_jurisdiccional"));
         e.setPresidencia(rs.getString("presidencia"));
         e.setSala(rs.getString("sala"));

@@ -19,7 +19,6 @@ public class ExpedienteDAO_PRE {
         String sql = " SET "
                 + " idExpediente = '" + expediente.getIdExpediente()+ "' , "
                 + " organo_jurisdiccional = '"+expediente.getOrganoJurisdiccional()+"' , "
-                + " numero_expediente = '"+expediente.getNumeroExpediente()+"' ,"
                 + " sala = '"+expediente.getSala()+"'";
                
         

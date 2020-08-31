@@ -25,7 +25,7 @@ public class DBConection {
 
      
             JDBC_DRIVER = "com.mysql.jdbc.Driver";
-            DB_URL = "jdbc:mysql://localhost/sabanalaboral";
+            DB_URL = "jdbc:mysql://10.4.17.137/sabanalaboral";
             USER = "root";
             PASS = "dgsl";
 

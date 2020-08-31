@@ -11,37 +11,15 @@
 <jsp:include page="/_validate.jsp" />
 <main>
     <jsp:include page="/_header.jsp"/>
-    <div class="container">
-        <div class="card">
-            <div class="card-content">
-                <div class="card-title">Alta Expediente</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col s3">
-                            <label>Expediente</label>
-                            <s:textfield cssClass="required" theme="simple" name="expediente.idExpediente" />
-                        </div>
-                        <div class="col s6">
-                            <label>Organo Jurisdiccional</label>
-                            <s:select id="sel_organoJurisdiccional" list="{'TFCyA','JLCyA'}" headerKey="" headerValue="-seleccione-" theme="simple" name="expediente.organoJurisdiccional" />
-                        </div>
-                         <div class="col s3">
-                            <label>Sala</label>
-                            <s:textfield theme="simple" name="expediente.sala" />
-                        </div>
-                    </div>
-                   
-
-                    <div class="row">
-                        <div class="col s3">
-                            <label>Presidencia</label>
-                            <s:textfield theme="simple" name="expediente.Presidencia" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <jsp:include page="_expediente.jsp" />
+    <jsp:include page="_actores.jsp"/>
+    <div style="position: fixed; bottom: 15px; right: 15px;">
+        <a id="save" class="btn-floating btn-large waves-effect waves-light blue blue-lighten-1">
+            <i class="material-icons">save</i>
+        </a>
     </div>
+
+
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -53,15 +31,26 @@
         utils.initMoment();
         utils.initActionMessage();
     }
-    
+
     function handleChangeOrganoJurisdiccional() {
-       alert("hello");
+
         $("#sxa_handleChangeOrganoJurisdiccional").click();
+    }
+
+    function showAjaxMC_addActor() {
+        $("#modal").modal("open");
+        $("#sxa_showAjaxMC_addActor").click();
+    }
+    
+    function save () {
+        $("#sxa_save").click();
     }
 
     $(document).ready(function () {
         init();
         $("#sel_organoJurisdiccional").change(handleChangeOrganoJurisdiccional)
+        $(".showAjaxMC_addActor").click(showAjaxMC_addActor)
+        $("#save").click(save);
 
     });
 

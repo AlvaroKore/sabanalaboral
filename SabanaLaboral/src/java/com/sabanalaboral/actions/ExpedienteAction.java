@@ -7,7 +7,9 @@ package com.sabanalaboral.actions;
 
 import com.sabanalaboral.dao.DBConection;
 import com.sabanalaboral.dao.ExpedienteDAO;
+import com.sabanalaboral.dao.pre.ExpedienteDAO_PRE;
 import java.sql.Connection;
+import sabanalaboral.ejb.entities.Autor;
 import sabanalaboral.ejb.entities.Expediente;
 
 /**
@@ -16,6 +18,7 @@ import sabanalaboral.ejb.entities.Expediente;
  */
 public class ExpedienteAction extends BaseAction {
     private Expediente expediente;
+    private Autor autor;
     public String showAjaxContent() {
         try {
             System.out.println("showAjaxAction");
@@ -35,6 +38,32 @@ public class ExpedienteAction extends BaseAction {
         System.out.println("handleChangeOrganoJurisdiccional");
         return SUCCESS;
     }
+      
+      public String showAjaxMC_addActor() {
+          System.out.println("showAjaxMC_addActor");
+          return SUCCESS;
+      }
+      
+      
+      public String save() throws Exception {
+          System.out.println("save");
+          Connection conn = DBConection.conn();
+          try {
+              conn.setAutoCommit(false);
+              ExpedienteDAO_PRE.create(expediente, conn);
+             
+              conn.commit();
+              conn.close();
+          } catch (Exception e) {
+              conn.rollback();
+              conn.close();
+              e.printStackTrace();
+              addActionError("Error al guardar expediente");
+              return INPUT;
+          }
+          addActionMessage("Expediente guardado con éxito.");
+          return SUCCESS;
+      }
 
     public Expediente getExpediente() {
         return expediente;
@@ -43,6 +72,16 @@ public class ExpedienteAction extends BaseAction {
     public void setExpediente(Expediente expediente) {
         this.expediente = expediente;
     }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+    
+    
     
     
 }

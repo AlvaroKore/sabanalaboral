@@ -9,7 +9,6 @@ package sabanalaboral.ejb.entities;
 public class Expediente {
     private String idExpediente;
     private String organoJurisdiccional;
-    private String numeroExpediente;
     private String sala;
     private String presidencia;
 
@@ -31,13 +30,7 @@ public class Expediente {
         this.organoJurisdiccional = organoJurisdiccional;
     }
 
-    public String getNumeroExpediente() {
-        return numeroExpediente;
-    }
-
-    public void setNumeroExpediente(String numeroExpediente) {
-        this.numeroExpediente = numeroExpediente;
-    }
+   
 
     public String getPresidencia() {
         return presidencia;

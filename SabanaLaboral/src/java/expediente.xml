@@ -46,6 +46,16 @@
             <result name="input">/expediente/AjaxContent.jsp</result>
         </action>
         
+         <action name="showAjaxMC_addActor" class="com.sabanalaboral.actions.ExpedienteAction" method="showAjaxMC_addActor">
+            <result name="success">/expediente/MC_addActor.jsp</result>
+            <result name="input">/expediente/MC_addActor.jsp</result>
+        </action>
+        
+         <action name="save" class="com.sabanalaboral.actions.ExpedienteAction" method="save">
+            <result name="success">/expediente/AjaxContent.jsp</result>
+            <result name="input">/expediente/AjaxContent.jsp</result>
+        </action>
+        
         
       
       
